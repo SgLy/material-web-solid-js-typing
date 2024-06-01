@@ -1,0 +1,18 @@
+{
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./material-web"],
+  "compilerOptions": {
+    "strict": true,
+    "alwaysStrict": true,
+    "inlineSourceMap": true,
+    "resolveJsonModule": true,
+    "target": "es2019",
+    "module": "commonjs",
+    "lib": ["es2019", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "@": ["."]
+    },
+    "newLine": "LF"
+  }
+}
