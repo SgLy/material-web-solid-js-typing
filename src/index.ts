@@ -71,8 +71,9 @@ fs.readdirSync(docsFolder).forEach(f => {
       heading => heading.isHeading() && heading.depth === 3 && (heading.tokens?.length || 0) > 3,
       (heading, context) => {
         context.name = heading.asHeading()?.tokens[0].asText()?.text.trim();
-        context.tagName = escape(heading.asHeading()?.tokens[2].asText()?.text.trim() || '');
-        const anchor = `${context.name!}-${context.tagName!.slice(1, context.tagName.length - 1)}`.toLowerCase();
+        const tagName = escape(heading.asHeading()?.tokens[2].asText()?.text.trim() || '');
+        context.tagName = tagName.slice(1, tagName.length - 1);
+        const anchor = `${context.name!}-${context.tagName!}`.toLowerCase();
         context.file = `${f}#${anchor}`;
       },
     )
