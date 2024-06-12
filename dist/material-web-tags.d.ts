@@ -2371,45 +2371,85 @@ declare namespace MaterialWeb {
 declare module 'solid-js' {
   namespace JSX {
     interface IntrinsicElements {
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button */
       'md-elevated-button': MaterialWeb.MdElevatedButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button */
       'md-filled-button': MaterialWeb.MdFilledButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button */
       'md-filled-tonal-button': MaterialWeb.MdFilledTonalButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button */
       'md-outlined-button': MaterialWeb.MdOutlinedButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button */
       'md-text-button': MaterialWeb.MdTextButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox */
       'md-checkbox': MaterialWeb.MdCheckbox<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdchipset-md-chip-set */
       'md-chip-set': MaterialWeb.MdChipSet<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip */
       'md-assist-chip': MaterialWeb.MdAssistChip<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip */
       'md-filter-chip': MaterialWeb.MdFilterChip<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip */
       'md-input-chip': MaterialWeb.MdInputChip<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip */
       'md-suggestion-chip': MaterialWeb.MdSuggestionChip<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog */
       'md-dialog': MaterialWeb.MdDialog<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/divider.md#mddivider-md-divider */
       'md-divider': MaterialWeb.MdDivider<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdfab-md-fab */
       'md-fab': MaterialWeb.MdFab<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdbrandedfab-md-branded-fab */
       'md-branded-fab': MaterialWeb.MdBrandedFab<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/focus-ring.md#mdfocusring-md-focus-ring */
       'md-focus-ring': MaterialWeb.MdFocusRing<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button */
       'md-icon-button': MaterialWeb.MdIconButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button */
       'md-filled-icon-button': MaterialWeb.MdFilledIconButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button */
       'md-filled-tonal-icon-button': MaterialWeb.MdFilledTonalIconButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button */
       'md-outlined-icon-button': MaterialWeb.MdOutlinedIconButton<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlist-md-list */
       'md-list': MaterialWeb.MdList<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlistitem-md-list-item */
       'md-list-item': MaterialWeb.MdListItem<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu */
       'md-menu': MaterialWeb.MdMenu<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item */
       'md-menu-item': MaterialWeb.MdMenuItem<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu */
       'md-sub-menu': MaterialWeb.MdSubMenu<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdlinearprogress-md-linear-progress */
       'md-linear-progress': MaterialWeb.MdLinearProgress<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdcircularprogress-md-circular-progress */
       'md-circular-progress': MaterialWeb.MdCircularProgress<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio */
       'md-radio': MaterialWeb.MdRadio<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/ripple.md#mdripple-md-ripple */
       'md-ripple': MaterialWeb.MdRipple<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select */
       'md-filled-select': MaterialWeb.MdFilledSelect<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select */
       'md-outlined-select': MaterialWeb.MdOutlinedSelect<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option */
       'md-select-option': MaterialWeb.MdSelectOption<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider */
       'md-slider': MaterialWeb.MdSlider<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch */
       'md-switch': MaterialWeb.MdSwitch<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdtabs-md-tabs */
       'md-tabs': MaterialWeb.MdTabs<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdprimarytab-md-primary-tab */
       'md-primary-tab': MaterialWeb.MdPrimaryTab<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdsecondarytab-md-secondary-tab */
       'md-secondary-tab': MaterialWeb.MdSecondaryTab<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field */
       'md-filled-text-field': MaterialWeb.MdFilledTextField<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field */
       'md-outlined-text-field': MaterialWeb.MdOutlinedTextField<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/icon.md */
       'md-icon': MaterialWeb.MdIcon<HTMLElement>;
     }
   }
