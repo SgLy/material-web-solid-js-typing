@@ -161,7 +161,7 @@ declare namespace MaterialWeb {
 declare module 'solid-js' {
   namespace JSX {
     interface IntrinsicElements {
-      ${components.map(c => `'${c.tagName}': MaterialWeb.${c.name}<HTMLDivElement>;`).join('\n')}
+      ${components.map(c => `'${c.tagName}': MaterialWeb.${c.name}<HTMLElement>;`).join('\n')}
     }
   }
 }
