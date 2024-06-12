@@ -100,6 +100,14 @@ fs.readdirSync(docsFolder).forEach(f => {
   components.push(...parsed);
 });
 
+// dirty quick fix for md-icon which has no `Properties` section
+components.push({
+  file: 'icon.md',
+  name: 'MdIcon',
+  tagName: 'md-icon',
+  properties: [],
+});
+
 const typeMap = new Map<string, string>();
 typeMap.set('HTMLElement & Partial<SurfacePositionTarget>', 'HTMLElement');
 typeMap.set('Chip', 'HTMLElement');

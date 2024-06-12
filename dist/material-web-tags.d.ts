@@ -2365,6 +2365,7 @@ declare namespace MaterialWeb {
      */
     willValidate: boolean;
   }
+  export interface MdIcon<T> extends SolidJS.JSX.HTMLAttributes<T> {}
 }
 
 declare module 'solid-js' {
@@ -2409,6 +2410,7 @@ declare module 'solid-js' {
       'md-secondary-tab': MaterialWeb.MdSecondaryTab<HTMLDivElement>;
       'md-filled-text-field': MaterialWeb.MdFilledTextField<HTMLDivElement>;
       'md-outlined-text-field': MaterialWeb.MdOutlinedTextField<HTMLDivElement>;
+      'md-icon': MaterialWeb.MdIcon<HTMLDivElement>;
     }
   }
 }
