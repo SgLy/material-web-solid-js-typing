@@ -10,6 +10,12 @@ declare namespace MaterialWeb {
      */
     disabled: boolean;
     /**
+     * @description Whether the button is "soft-disabled" (disabled but still focusable).
+     * @default false
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
+     */
+    softDisabled: boolean;
+    /**
      * @description The URL that the link button points to.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
@@ -36,7 +42,7 @@ declare namespace MaterialWeb {
      */
     hasIcon: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
@@ -92,7 +98,7 @@ declare namespace MaterialWeb {
      */
     hasIcon: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
@@ -148,7 +154,7 @@ declare namespace MaterialWeb {
      */
     hasIcon: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
@@ -204,7 +210,7 @@ declare namespace MaterialWeb {
      */
     hasIcon: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
@@ -260,7 +266,7 @@ declare namespace MaterialWeb {
      */
     hasIcon: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
@@ -753,7 +759,7 @@ declare namespace MaterialWeb {
      */
     selected: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
@@ -787,6 +793,12 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
     disabled: boolean;
+    /**
+     * @description "Soft-disables" the icon button (disabled but still focusable).
+     * @default false
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
+     */
+    softDisabled: boolean;
     /**
      * @description Flips the icon if it is in an RTL context at startup.
      * @default false
@@ -824,7 +836,7 @@ declare namespace MaterialWeb {
      */
     selected: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
@@ -895,7 +907,7 @@ declare namespace MaterialWeb {
      */
     selected: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
@@ -966,7 +978,7 @@ declare namespace MaterialWeb {
      */
     selected: boolean;
     /**
-     * @description The default behavior of the button. May be "text", "reset", or "submit" (default).
+     * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
