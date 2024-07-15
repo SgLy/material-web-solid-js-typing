@@ -149,7 +149,7 @@ declare namespace MaterialWeb {
           }
           ret.push(` * @link https://github.com/material-components/material-web/blob/main/docs/components/${c.file}`);
           ret.push(' */');
-          ret.push(`${p.name}: ${type};`);
+          ret.push(`${p.name}${p.defaultValue !== '' ? '?' : ''}: ${type};`);
           return ret.join('\n');
         })
         .join('\n');

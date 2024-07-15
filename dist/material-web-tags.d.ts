@@ -8,25 +8,25 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description Whether the button is "soft-disabled" (disabled but still focusable).
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    softDisabled: boolean;
+    softDisabled?: boolean;
     /**
      * @description The URL that the link button points to.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Where to display the linked `href` URL for a link button. Common options include `_blank` to open in a new tab.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    target: string;
+    target?: string;
     /**
      * @description Whether to render the icon at the inline end of the label rather than the inline start.
      *
@@ -34,35 +34,35 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    trailingIcon: boolean;
+    trailingIcon?: boolean;
     /**
      * @description Whether to display the icon or not.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdelevatedbutton-md-elevated-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
   }
   export interface MdFilledButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -70,19 +70,19 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description The URL that the link button points to.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Where to display the linked `href` URL for a link button. Common options include `_blank` to open in a new tab.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    target: string;
+    target?: string;
     /**
      * @description Whether to render the icon at the inline end of the label rather than the inline start.
      *
@@ -90,35 +90,35 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    trailingIcon: boolean;
+    trailingIcon?: boolean;
     /**
      * @description Whether to display the icon or not.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledbutton-md-filled-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
   }
   export interface MdFilledTonalButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -126,19 +126,19 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description The URL that the link button points to.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Where to display the linked `href` URL for a link button. Common options include `_blank` to open in a new tab.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    target: string;
+    target?: string;
     /**
      * @description Whether to render the icon at the inline end of the label rather than the inline start.
      *
@@ -146,35 +146,35 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    trailingIcon: boolean;
+    trailingIcon?: boolean;
     /**
      * @description Whether to display the icon or not.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdfilledtonalbutton-md-filled-tonal-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
   }
   export interface MdOutlinedButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -182,19 +182,19 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description The URL that the link button points to.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Where to display the linked `href` URL for a link button. Common options include `_blank` to open in a new tab.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    target: string;
+    target?: string;
     /**
      * @description Whether to render the icon at the inline end of the label rather than the inline start.
      *
@@ -202,35 +202,35 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    trailingIcon: boolean;
+    trailingIcon?: boolean;
     /**
      * @description Whether to display the icon or not.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdoutlinedbutton-md-outlined-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
   }
   export interface MdTextButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -238,19 +238,19 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description The URL that the link button points to.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Where to display the linked `href` URL for a link button. Common options include `_blank` to open in a new tab.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    target: string;
+    target?: string;
     /**
      * @description Whether to render the icon at the inline end of the label rather than the inline start.
      *
@@ -258,35 +258,35 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    trailingIcon: boolean;
+    trailingIcon?: boolean;
     /**
      * @description Whether to display the icon or not.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/button.md#mdtextbutton-md-text-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
   }
   export interface MdCheckbox<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -294,7 +294,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
      */
-    checked: boolean;
+    checked?: boolean;
     /**
      * @description Whether or not the checkbox is indeterminate.
      *
@@ -302,7 +302,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
      */
-    indeterminate: boolean;
+    indeterminate?: boolean;
     /**
      * @description When true, require the checkbox to be selected when participating in form submission.
      *
@@ -310,7 +310,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
      */
-    required: boolean;
+    required?: boolean;
     /**
      * @description The value of the checkbox that is submitted with a form when selected.
      *
@@ -318,17 +318,17 @@ declare namespace MaterialWeb {
      * @default 'on'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
      */
-    name: string;
+    name?: string;
   }
   export interface MdChipSet<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -336,24 +336,24 @@ declare namespace MaterialWeb {
      * @type {Chip[]}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdchipset-md-chip-set
      */
-    chips: HTMLElement[];
+    chips?: HTMLElement[];
   }
   export interface MdAssistChip<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
      */
-    elevated: boolean;
+    elevated?: boolean;
     /**
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
      */
-    href: string;
+    href?: string;
     /**
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
      */
-    target: string;
+    target?: string;
     /**
      * @description Whether or not the chip is disabled.
      *
@@ -361,7 +361,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description When true, allow disabled chips to be focused with arrow keys.
      *
@@ -369,13 +369,13 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
      */
-    alwaysFocusable: boolean;
+    alwaysFocusable?: boolean;
     /**
      * @description The label of the chip.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
      */
-    label: string;
+    label?: string;
     /**
      * @description Only needed for SSR.
      *
@@ -383,24 +383,24 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
   }
   export interface MdFilterChip<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    elevated: boolean;
+    elevated?: boolean;
     /**
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    removable: boolean;
+    removable?: boolean;
     /**
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @description Only needed for SSR.
      *
@@ -408,7 +408,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    hasSelectedIcon: boolean;
+    hasSelectedIcon?: boolean;
     /**
      * @description Whether or not the chip is disabled.
      *
@@ -416,7 +416,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description When true, allow disabled chips to be focused with arrow keys.
      *
@@ -424,13 +424,13 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    alwaysFocusable: boolean;
+    alwaysFocusable?: boolean;
     /**
      * @description The label of the chip.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    label: string;
+    label?: string;
     /**
      * @description Only needed for SSR.
      *
@@ -438,44 +438,44 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    handleTrailingActionFocus: () => void;
+    handleTrailingActionFocus?: () => void;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
-    ariaLabelRemove: string;
+    ariaLabelRemove?: string;
   }
   export interface MdInputChip<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    avatar: boolean;
+    avatar?: boolean;
     /**
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    href: string;
+    href?: string;
     /**
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    target: string;
+    target?: string;
     /**
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    removeOnly: boolean;
+    removeOnly?: boolean;
     /**
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @description Whether or not the chip is disabled.
      *
@@ -483,7 +483,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description When true, allow disabled chips to be focused with arrow keys.
      *
@@ -491,13 +491,13 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    alwaysFocusable: boolean;
+    alwaysFocusable?: boolean;
     /**
      * @description The label of the chip.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    label: string;
+    label?: string;
     /**
      * @description Only needed for SSR.
      *
@@ -505,34 +505,34 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    handleTrailingActionFocus: () => void;
+    handleTrailingActionFocus?: () => void;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
-    ariaLabelRemove: string;
+    ariaLabelRemove?: string;
   }
   export interface MdSuggestionChip<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
      */
-    elevated: boolean;
+    elevated?: boolean;
     /**
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
      */
-    href: string;
+    href?: string;
     /**
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
      */
-    target: string;
+    target?: string;
     /**
      * @description Whether or not the chip is disabled.
      *
@@ -540,7 +540,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description When true, allow disabled chips to be focused with arrow keys.
      *
@@ -548,13 +548,13 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
      */
-    alwaysFocusable: boolean;
+    alwaysFocusable?: boolean;
     /**
      * @description The label of the chip.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
      */
-    label: string;
+    label?: string;
     /**
      * @description Only needed for SSR.
      *
@@ -562,7 +562,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
   }
   export interface MdDialog<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -570,7 +570,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
      */
-    quick: boolean;
+    quick?: boolean;
     /**
      * @description Gets or sets the dialog's return value, usually to indicate which button a user pressed to close it.
      *
@@ -578,13 +578,13 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
      */
-    returnValue: string;
+    returnValue?: string;
     /**
      * @description The type of dialog for accessibility. Set this to `alert` to announce a dialog as an alert dialog.
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
      */
-    type: string;
+    type?: string;
     /**
      * @description Disables focus trapping, which by default keeps keyboard Tab navigation within the dialog.
      *
@@ -594,26 +594,26 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
      */
-    noFocusTrap: boolean;
+    noFocusTrap?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
      */
-    open: boolean;
+    open?: boolean;
     /**
      * @description Gets the opening animation for a dialog. Set to a new function to customize the animation.
      * @default function { ... }
      * @type {() => DialogAnimation}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
      */
-    getOpenAnimation: () => any;
+    getOpenAnimation?: () => any;
     /**
      * @description Gets the closing animation for a dialog. Set to a new function to customize the animation.
      * @default function { ... }
      * @type {() => DialogAnimation}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
      */
-    getCloseAnimation: () => any;
+    getCloseAnimation?: () => any;
   }
   export interface MdDivider<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -621,19 +621,19 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/divider.md#mddivider-md-divider
      */
-    inset: boolean;
+    inset?: boolean;
     /**
      * @description Indents the divider with padding on the leading side.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/divider.md#mddivider-md-divider
      */
-    insetStart: boolean;
+    insetStart?: boolean;
     /**
      * @description Indents the divider with padding on the trailing side.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/divider.md#mddivider-md-divider
      */
-    insetEnd: boolean;
+    insetEnd?: boolean;
   }
   export interface MdFab<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -641,7 +641,7 @@ declare namespace MaterialWeb {
      * @default 'surface'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdfab-md-fab
      */
-    variant: string;
+    variant?: string;
     /**
      * @description The size of the FAB.
      *
@@ -649,19 +649,19 @@ declare namespace MaterialWeb {
      * @default 'medium'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdfab-md-fab
      */
-    size: string;
+    size?: string;
     /**
      * @description The text to display on the FAB.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdfab-md-fab
      */
-    label: string;
+    label?: string;
     /**
      * @description Lowers the FAB's elevation.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdfab-md-fab
      */
-    lowered: boolean;
+    lowered?: boolean;
   }
   export interface MdBrandedFab<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -669,7 +669,7 @@ declare namespace MaterialWeb {
      * @default 'surface'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdbrandedfab-md-branded-fab
      */
-    variant: string;
+    variant?: string;
     /**
      * @description The size of the FAB.
      *
@@ -677,19 +677,19 @@ declare namespace MaterialWeb {
      * @default 'medium'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdbrandedfab-md-branded-fab
      */
-    size: string;
+    size?: string;
     /**
      * @description The text to display on the FAB.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdbrandedfab-md-branded-fab
      */
-    label: string;
+    label?: string;
     /**
      * @description Lowers the FAB's elevation.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/fab.md#mdbrandedfab-md-branded-fab
      */
-    lowered: boolean;
+    lowered?: boolean;
   }
   export interface MdFocusRing<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -697,23 +697,23 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/focus-ring.md#mdfocusring-md-focus-ring
      */
-    visible: boolean;
+    visible?: boolean;
     /**
      * @description Makes the focus ring animate inwards instead of outwards.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/focus-ring.md#mdfocusring-md-focus-ring
      */
-    inward: boolean;
+    inward?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/focus-ring.md#mdfocusring-md-focus-ring
      */
-    htmlFor: string;
+    htmlFor?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/focus-ring.md#mdfocusring-md-focus-ring
      */
-    control: HTMLElement;
+    control?: HTMLElement;
   }
   export interface MdIconButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -721,70 +721,70 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description Flips the icon if it is in an RTL context at startup.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    flipIconInRtl: boolean;
+    flipIconInRtl?: boolean;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `href` resource attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `target` attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    target: string;
+    target?: string;
     /**
      * @description The `aria-label` of the button when the button is toggleable and selected.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    ariaLabelSelected: string;
+    ariaLabelSelected?: string;
     /**
      * @description When true, the button will toggle between selected and unselected states
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    toggle: boolean;
+    toggle?: boolean;
     /**
      * @description Sets the selected state. When false, displays the default icon. When true, displays the selected icon, or the default icon If no `slot="selected"` icon is provided.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
-    labels: NodeList;
+    labels?: NodeList;
   }
   export interface MdFilledIconButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -792,76 +792,76 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description "Soft-disables" the icon button (disabled but still focusable).
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    softDisabled: boolean;
+    softDisabled?: boolean;
     /**
      * @description Flips the icon if it is in an RTL context at startup.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    flipIconInRtl: boolean;
+    flipIconInRtl?: boolean;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `href` resource attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `target` attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    target: string;
+    target?: string;
     /**
      * @description The `aria-label` of the button when the button is toggleable and selected.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    ariaLabelSelected: string;
+    ariaLabelSelected?: string;
     /**
      * @description When true, the button will toggle between selected and unselected states
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    toggle: boolean;
+    toggle?: boolean;
     /**
      * @description Sets the selected state. When false, displays the default icon. When true, displays the selected icon, or the default icon If no `slot="selected"` icon is provided.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
-    labels: NodeList;
+    labels?: NodeList;
   }
   export interface MdFilledTonalIconButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -869,70 +869,70 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description Flips the icon if it is in an RTL context at startup.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    flipIconInRtl: boolean;
+    flipIconInRtl?: boolean;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `href` resource attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `target` attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    target: string;
+    target?: string;
     /**
      * @description The `aria-label` of the button when the button is toggleable and selected.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    ariaLabelSelected: string;
+    ariaLabelSelected?: string;
     /**
      * @description When true, the button will toggle between selected and unselected states
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    toggle: boolean;
+    toggle?: boolean;
     /**
      * @description Sets the selected state. When false, displays the default icon. When true, displays the selected icon, or the default icon If no `slot="selected"` icon is provided.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
-    labels: NodeList;
+    labels?: NodeList;
   }
   export interface MdOutlinedIconButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -940,70 +940,70 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description Flips the icon if it is in an RTL context at startup.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    flipIconInRtl: boolean;
+    flipIconInRtl?: boolean;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `href` resource attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    href: string;
+    href?: string;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `target` attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    target: string;
+    target?: string;
     /**
      * @description The `aria-label` of the button when the button is toggleable and selected.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    ariaLabelSelected: string;
+    ariaLabelSelected?: string;
     /**
      * @description When true, the button will toggle between selected and unselected states
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    toggle: boolean;
+    toggle?: boolean;
     /**
      * @description Sets the selected state. When false, displays the default icon. When true, displays the selected icon, or the default icon If no `slot="selected"` icon is provided.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @description The default behavior of the button. May be "button", "reset", or "submit" (default).
      * @default 'submit'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    type: string;
+    type?: string;
     /**
      * @description The value added to a form with the button's name when the button submits a form.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    form: HTMLFormElement;
+    form?: HTMLFormElement;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
-    labels: NodeList;
+    labels?: NodeList;
   }
   export interface MdList<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1011,7 +1011,7 @@ declare namespace MaterialWeb {
      * @type {ListItem[]}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlist-md-list
      */
-    items: HTMLElement[];
+    items?: HTMLElement[];
   }
   export interface MdListItem<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1019,25 +1019,25 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlistitem-md-list-item
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description Sets the behavior of the list item, defaults to "text". Change to "link" or "button" for interactive items.
      * @default 'text'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlistitem-md-list-item
      */
-    type: string;
+    type?: string;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `href` resource attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlistitem-md-list-item
      */
-    href: string;
+    href?: string;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `target` attribute when `href` is set.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlistitem-md-list-item
      */
-    target: string;
+    target?: string;
   }
   export interface MdMenu<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1047,7 +1047,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    anchor: string;
+    anchor?: string;
     /**
      * @description Whether the positioning algorithm should calculate relative to the parent of the anchor element (`absolute`), relative to the window (`fixed`), or relative to the document (`document`). `popover` will use the popover API to render the menu in the top-layer. If your browser does not support the popover API, it will fall back to `fixed`.
      *
@@ -1069,13 +1069,13 @@ declare namespace MaterialWeb {
      * @default 'absolute'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    positioning: string;
+    positioning?: string;
     /**
      * @description Skips the opening and closing animations.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    quick: boolean;
+    quick?: boolean;
     /**
      * @description Displays overflow content like a submenu. Not required in most cases when using `positioning="popover"`.
      *
@@ -1083,13 +1083,13 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    hasOverflow: boolean;
+    hasOverflow?: boolean;
     /**
      * @description Opens the menu and makes it visible. Alternative to the `.show()` and `.close()` methods
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    open: boolean;
+    open?: boolean;
     /**
      * @description Offsets the menu's inline alignment from the anchor by the given number in pixels. This value is direction aware and will follow the LTR / RTL direction.
      *
@@ -1097,7 +1097,7 @@ declare namespace MaterialWeb {
      * @default 0
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    xOffset: number;
+    xOffset?: number;
     /**
      * @description Offsets the menu's block alignment from the anchor by the given number in pixels.
      *
@@ -1105,13 +1105,13 @@ declare namespace MaterialWeb {
      * @default 0
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    yOffset: number;
+    yOffset?: number;
     /**
      * @description The max time between the keystrokes of the typeahead menu behavior before it clears the typeahead buffer.
      * @default 200
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    typeaheadDelay: number;
+    typeaheadDelay?: number;
     /**
      * @description The corner of the anchor which to align the menu in the standard logical property style of <block>-<inline> e.g. `'end-start'`.
      *
@@ -1119,7 +1119,7 @@ declare namespace MaterialWeb {
      * @default Corner.END_START
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    anchorCorner: string;
+    anchorCorner?: string;
     /**
      * @description The corner of the menu which to align the anchor in the standard logical property style of <block>-<inline> e.g. `'start-start'`.
      *
@@ -1127,7 +1127,7 @@ declare namespace MaterialWeb {
      * @default Corner.START_START
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    menuCorner: string;
+    menuCorner?: string;
     /**
      * @description Keeps the user clicks outside the menu.
      *
@@ -1135,7 +1135,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    stayOpenOnOutsideClick: boolean;
+    stayOpenOnOutsideClick?: boolean;
     /**
      * @description Keeps the menu open when focus leaves the menu's composed subtree.
      *
@@ -1143,13 +1143,13 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    stayOpenOnFocusout: boolean;
+    stayOpenOnFocusout?: boolean;
     /**
      * @description After closing, does not restore focus to the last focused element before the menu was opened.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    skipRestoreFocus: boolean;
+    skipRestoreFocus?: boolean;
     /**
      * @description The element that should be focused by default once opened.
      *
@@ -1157,38 +1157,38 @@ declare namespace MaterialWeb {
      * @default FocusState.FIRST_ITEM
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    defaultFocus: string;
+    defaultFocus?: string;
     /**
      * @description Turns off navigation wrapping. By default, navigating past the end of the menu items will wrap focus back to the beginning and vice versa. Use this for ARIA patterns that do not wrap focus, like combobox.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    noNavigationWrap: boolean;
+    noNavigationWrap?: boolean;
     /**
      * @description Whether or not the current menu is a submenu and should not handle specific navigation keys.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    isSubmenu: boolean;
+    isSubmenu?: boolean;
     /**
      * @description Handles typeahead navigation through the menu.
      * @default function { ... }
      * @type {TypeaheadController}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    typeaheadController: any;
+    typeaheadController?: any;
     /**
      * @default undefined
      * @type {HTMLElement & Partial<SurfacePositionTarget>}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    anchorElement: HTMLElement;
+    anchorElement?: HTMLElement;
     /**
      * @default undefined
      * @type {MenuItem[]}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
-    items: HTMLElement[];
+    items?: HTMLElement[];
   }
   export interface MdMenuItem<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1196,42 +1196,42 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description Sets the behavior and role of the menu item, defaults to "menuitem".
      * @default 'menuitem'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
      */
-    type: string;
+    type?: string;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `href` resource attribute.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
      */
-    href: string;
+    href?: string;
     /**
      * @description Sets the underlying `HTMLAnchorElement`'s `target` attribute when `href` is set.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
      */
-    target: string;
+    target?: string;
     /**
      * @description Keeps the menu open if clicked or keyboard selected.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
      */
-    keepOpen: boolean;
+    keepOpen?: boolean;
     /**
      * @description Sets the item in the selected visual state when a submenu is opened.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
      */
-    typeaheadText: string;
+    typeaheadText?: string;
   }
   export interface MdSubMenu<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1239,43 +1239,43 @@ declare namespace MaterialWeb {
      * @default Corner.START_END
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
      */
-    anchorCorner: string;
+    anchorCorner?: string;
     /**
      * @description The menuCorner to set on the submenu.
      * @default Corner.START_START
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
      */
-    menuCorner: string;
+    menuCorner?: string;
     /**
      * @description The delay between mouseenter and submenu opening.
      * @default 400
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
      */
-    hoverOpenDelay: number;
+    hoverOpenDelay?: number;
     /**
      * @description The delay between ponterleave and the submenu closing.
      * @default 400
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
      */
-    hoverCloseDelay: number;
+    hoverCloseDelay?: number;
     /**
      * @description READONLY: self-identifies as a menu item and sets its identifying attribute
      * @default true
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
      */
-    isSubMenu: boolean;
+    isSubMenu?: boolean;
     /**
      * @default undefined
      * @type {MenuItem}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
      */
-    item: HTMLElement;
+    item?: HTMLElement;
     /**
      * @default undefined
      * @type {Menu}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
      */
-    menu: HTMLElement;
+    menu?: HTMLElement;
   }
   export interface MdLinearProgress<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1283,31 +1283,31 @@ declare namespace MaterialWeb {
      * @default 0
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdlinearprogress-md-linear-progress
      */
-    buffer: number;
+    buffer?: number;
     /**
      * @description Progress to display, a fraction between 0 and `max`.
      * @default 0
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdlinearprogress-md-linear-progress
      */
-    value: number;
+    value?: number;
     /**
      * @description Maximum progress to display, defaults to 1.
      * @default 1
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdlinearprogress-md-linear-progress
      */
-    max: number;
+    max?: number;
     /**
      * @description Whether or not to display indeterminate progress, which gives no indication to how long an activity will take.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdlinearprogress-md-linear-progress
      */
-    indeterminate: boolean;
+    indeterminate?: boolean;
     /**
      * @description Whether or not to render indeterminate mode using 4 colors instead of one.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdlinearprogress-md-linear-progress
      */
-    fourColor: boolean;
+    fourColor?: boolean;
   }
   export interface MdCircularProgress<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1315,25 +1315,25 @@ declare namespace MaterialWeb {
      * @default 0
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdcircularprogress-md-circular-progress
      */
-    value: number;
+    value?: number;
     /**
      * @description Maximum progress to display, defaults to 1.
      * @default 1
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdcircularprogress-md-circular-progress
      */
-    max: number;
+    max?: number;
     /**
      * @description Whether or not to display indeterminate progress, which gives no indication to how long an activity will take.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdcircularprogress-md-circular-progress
      */
-    indeterminate: boolean;
+    indeterminate?: boolean;
     /**
      * @description Whether or not to render indeterminate mode using 4 colors instead of one.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/progress.md#mdcircularprogress-md-circular-progress
      */
-    fourColor: boolean;
+    fourColor?: boolean;
   }
   export interface MdRadio<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1341,28 +1341,28 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
      */
-    required: boolean;
+    required?: boolean;
     /**
      * @description The element value to use in form submission when checked.
      * @default 'on'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
      */
-    checked: boolean;
+    checked?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
      */
-    name: string;
+    name?: string;
   }
   export interface MdRipple<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1370,17 +1370,17 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/ripple.md#mdripple-md-ripple
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/ripple.md#mdripple-md-ripple
      */
-    htmlFor: string;
+    htmlFor?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/ripple.md#mdripple-md-ripple
      */
-    control: HTMLElement;
+    control?: HTMLElement;
   }
   export interface MdFilledSelect<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1388,13 +1388,13 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    quick: boolean;
+    quick?: boolean;
     /**
      * @description Whether or not the select is required.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    required: boolean;
+    required?: boolean;
     /**
      * @description The error message that replaces supporting text when `error` is true. If `errorText` is an empty string, then the supporting text will continue to show.
      *
@@ -1402,25 +1402,25 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    errorText: string;
+    errorText?: string;
     /**
      * @description The floating label for the field.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    label: string;
+    label?: string;
     /**
      * @description Disables the asterisk on the floating label, when the select is required.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    noAsterisk: boolean;
+    noAsterisk?: boolean;
     /**
      * @description Conveys additional information below the select, such as how it should be used.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    supportingText: string;
+    supportingText?: string;
     /**
      * @description Gets or sets whether or not the select is in a visually invalid state.
      *
@@ -1428,7 +1428,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    error: boolean;
+    error?: boolean;
     /**
      * @description Whether or not the underlying md-menu should be position: fixed to display in a top-level manner, or position: absolute.
      *
@@ -1436,69 +1436,69 @@ declare namespace MaterialWeb {
      * @default 'popover'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    menuPositioning: string;
+    menuPositioning?: string;
     /**
      * @description Clamps the menu-width to the width of the select.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    clampMenuWidth: boolean;
+    clampMenuWidth?: boolean;
     /**
      * @description The max time between the keystrokes of the typeahead select / menu behavior before it clears the typeahead buffer.
      * @default DEFAULT_TYPEAHEAD_BUFFER_TIME
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    typeaheadDelay: number;
+    typeaheadDelay?: number;
     /**
      * @description Whether or not the text field has a leading icon. Used for SSR.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    hasLeadingIcon: boolean;
+    hasLeadingIcon?: boolean;
     /**
      * @description Text to display in the field. Only set for SSR.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    displayText: string;
+    displayText?: string;
     /**
      * @description Whether the menu should be aligned to the start or the end of the select's textbox.
      * @default 'start'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    menuAlign: string;
+    menuAlign?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    selectedIndex: number;
+    selectedIndex?: number;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    name: string;
-    /**
-     * @default undefined
-     * @type {SelectOption[]}
-     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
-     */
-    options: HTMLElement[];
+    name?: string;
     /**
      * @default undefined
      * @type {SelectOption[]}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
-    selectedOptions: HTMLElement[];
+    options?: HTMLElement[];
+    /**
+     * @default undefined
+     * @type {SelectOption[]}
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    selectedOptions?: HTMLElement[];
   }
   export interface MdOutlinedSelect<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1506,13 +1506,13 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    quick: boolean;
+    quick?: boolean;
     /**
      * @description Whether or not the select is required.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    required: boolean;
+    required?: boolean;
     /**
      * @description The error message that replaces supporting text when `error` is true. If `errorText` is an empty string, then the supporting text will continue to show.
      *
@@ -1520,25 +1520,25 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    errorText: string;
+    errorText?: string;
     /**
      * @description The floating label for the field.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    label: string;
+    label?: string;
     /**
      * @description Disables the asterisk on the floating label, when the select is required.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    noAsterisk: boolean;
+    noAsterisk?: boolean;
     /**
      * @description Conveys additional information below the select, such as how it should be used.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    supportingText: string;
+    supportingText?: string;
     /**
      * @description Gets or sets whether or not the select is in a visually invalid state.
      *
@@ -1546,7 +1546,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    error: boolean;
+    error?: boolean;
     /**
      * @description Whether or not the underlying md-menu should be position: fixed to display in a top-level manner, or position: absolute.
      *
@@ -1554,69 +1554,69 @@ declare namespace MaterialWeb {
      * @default 'popover'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    menuPositioning: string;
+    menuPositioning?: string;
     /**
      * @description Clamps the menu-width to the width of the select.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    clampMenuWidth: boolean;
+    clampMenuWidth?: boolean;
     /**
      * @description The max time between the keystrokes of the typeahead select / menu behavior before it clears the typeahead buffer.
      * @default DEFAULT_TYPEAHEAD_BUFFER_TIME
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    typeaheadDelay: number;
+    typeaheadDelay?: number;
     /**
      * @description Whether or not the text field has a leading icon. Used for SSR.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    hasLeadingIcon: boolean;
+    hasLeadingIcon?: boolean;
     /**
      * @description Text to display in the field. Only set for SSR.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    displayText: string;
+    displayText?: string;
     /**
      * @description Whether the menu should be aligned to the start or the end of the select's textbox.
      * @default 'start'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    menuAlign: string;
+    menuAlign?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    selectedIndex: number;
+    selectedIndex?: number;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    name: string;
-    /**
-     * @default undefined
-     * @type {SelectOption[]}
-     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
-     */
-    options: HTMLElement[];
+    name?: string;
     /**
      * @default undefined
      * @type {SelectOption[]}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
-    selectedOptions: HTMLElement[];
+    options?: HTMLElement[];
+    /**
+     * @default undefined
+     * @type {SelectOption[]}
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    selectedOptions?: HTMLElement[];
   }
   export interface MdSelectOption<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1624,34 +1624,34 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @description Sets the item in the selected visual state when a submenu is opened.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @description Form value of the option.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
      */
-    value: string;
+    value?: string;
     /**
      * @default 'option' as const
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
      */
-    type: string;
+    type?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
      */
-    typeaheadText: string;
+    typeaheadText?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
      */
-    displayText: string;
+    displayText?: string;
   }
   export interface MdSlider<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1659,117 +1659,117 @@ declare namespace MaterialWeb {
      * @default 0
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    min: number;
+    min?: number;
     /**
      * @description The slider maximum value
      * @default 100
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    max: number;
+    max?: number;
     /**
      * @description The slider value displayed when range is false.
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    value: number;
+    value?: number;
     /**
      * @description The slider start value displayed when range is true.
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    valueStart: number;
+    valueStart?: number;
     /**
      * @description The slider end value displayed when range is true.
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    valueEnd: number;
+    valueEnd?: number;
     /**
      * @description An optional label for the slider's value displayed when range is false; if not set, the label is the value itself.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    valueLabel: string;
+    valueLabel?: string;
     /**
      * @description An optional label for the slider's start value displayed when range is true; if not set, the label is the valueStart itself.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    valueLabelStart: string;
+    valueLabelStart?: string;
     /**
      * @description An optional label for the slider's end value displayed when range is true; if not set, the label is the valueEnd itself.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    valueLabelEnd: string;
+    valueLabelEnd?: string;
     /**
      * @description Aria label for the slider's start handle displayed when range is true.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    ariaLabelStart: string;
+    ariaLabelStart?: string;
     /**
      * @description Aria value text for the slider's start value displayed when range is true.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    ariaValueTextStart: string;
+    ariaValueTextStart?: string;
     /**
      * @description Aria label for the slider's end handle displayed when range is true.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    ariaLabelEnd: string;
+    ariaLabelEnd?: string;
     /**
      * @description Aria value text for the slider's end value displayed when range is true.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    ariaValueTextEnd: string;
+    ariaValueTextEnd?: string;
     /**
      * @description The step between values.
      * @default 1
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    step: number;
+    step?: number;
     /**
      * @description Whether or not to show tick marks.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    ticks: boolean;
+    ticks?: boolean;
     /**
      * @description Whether or not to show a value label when activated.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    labeled: boolean;
+    labeled?: boolean;
     /**
      * @description Whether or not to show a value range. When false, the slider displays a slideable handle for the value property; when true, it displays slideable handles for the valueStart and valueEnd properties.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    range: boolean;
+    range?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    nameStart: string;
+    nameStart?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
-    nameEnd: string;
+    nameEnd?: string;
   }
   export interface MdSwitch<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1777,19 +1777,19 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
      */
-    selected: boolean;
+    selected?: boolean;
     /**
      * @description Shows both the selected and deselected icons.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
      */
-    icons: boolean;
+    icons?: boolean;
     /**
      * @description Shows only the selected icon, and not the deselected icon. If `true`, overrides the behavior of the `icons` property.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
      */
-    showOnlySelectedIcon: boolean;
+    showOnlySelectedIcon?: boolean;
     /**
      * @description When true, require the switch to be selected when participating in form submission.
      *
@@ -1797,23 +1797,23 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
      */
-    required: boolean;
+    required?: boolean;
     /**
      * @description The value associated with this switch on form submission. `null` is submitted when `selected` is `false`.
      * @default 'on'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
      */
-    value: string;
+    value?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
      */
-    name: string;
+    name?: string;
   }
   export interface MdTabs<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1821,25 +1821,25 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdtabs-md-tabs
      */
-    autoActivate: boolean;
+    autoActivate?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdtabs-md-tabs
      */
-    activeTabIndex: number;
+    activeTabIndex?: number;
     /**
      * @description The tabs of this tab bar.
      * @default undefined
      * @type {Tab[]}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdtabs-md-tabs
      */
-    tabs: HTMLElement[];
+    tabs?: HTMLElement[];
     /**
      * @default undefined
      * @type {Tab}
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdtabs-md-tabs
      */
-    activeTab: HTMLElement;
+    activeTab?: HTMLElement;
   }
   export interface MdPrimaryTab<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1847,36 +1847,36 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdprimarytab-md-primary-tab
      */
-    inlineIcon: boolean;
+    inlineIcon?: boolean;
     /**
      * @description The attribute `md-tab` indicates that the element is a tab for the parent element, `<md-tabs>`. Make sure if you're implementing your own `md-tab` component that you have an `md-tab` attribute set.
      * @default true
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdprimarytab-md-primary-tab
      */
-    isTab: boolean;
+    isTab?: boolean;
     /**
      * @description Whether or not the tab is selected.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdprimarytab-md-primary-tab
      */
-    active: boolean;
+    active?: boolean;
     /**
      * @description In SSR, set this to true when an icon is present.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdprimarytab-md-primary-tab
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @description In SSR, set this to true when there is no label and only an icon.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdprimarytab-md-primary-tab
      */
-    iconOnly: boolean;
+    iconOnly?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdprimarytab-md-primary-tab
      */
-    selected: boolean;
+    selected?: boolean;
   }
   export interface MdSecondaryTab<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1884,30 +1884,30 @@ declare namespace MaterialWeb {
      * @default true
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdsecondarytab-md-secondary-tab
      */
-    isTab: boolean;
+    isTab?: boolean;
     /**
      * @description Whether or not the tab is selected.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdsecondarytab-md-secondary-tab
      */
-    active: boolean;
+    active?: boolean;
     /**
      * @description In SSR, set this to true when an icon is present.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdsecondarytab-md-secondary-tab
      */
-    hasIcon: boolean;
+    hasIcon?: boolean;
     /**
      * @description In SSR, set this to true when there is no label and only an icon.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdsecondarytab-md-secondary-tab
      */
-    iconOnly: boolean;
+    iconOnly?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdsecondarytab-md-secondary-tab
      */
-    selected: boolean;
+    selected?: boolean;
   }
   export interface MdFilledTextField<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1917,7 +1917,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    error: boolean;
+    error?: boolean;
     /**
      * @description The error message that replaces supporting text when `error` is true. If `errorText` is an empty string, then the supporting text will continue to show.
      *
@@ -1925,7 +1925,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    errorText: string;
+    errorText?: string;
     /**
      * @description The floating Material label of the textfield component. It informs the user about what information is requested for a text field. It is aligned with the input text, is always visible, and it floats when focused or when text is entered into the textfield. This label also sets accessibilty labels, but the accessible label is overriden by `aria-label`.
      *
@@ -1933,13 +1933,13 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    label: string;
+    label?: string;
     /**
      * @description Disables the asterisk on the floating label, when the text field is required.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    noAsterisk: boolean;
+    noAsterisk?: boolean;
     /**
      * @description Indicates that the user must specify a value for the input before the owning form can be submitted and will render an error state when `reportValidity()` is invoked when value is empty. Additionally the floating label will render an asterisk `"*"` when true.
      *
@@ -1947,66 +1947,66 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    required: boolean;
+    required?: boolean;
     /**
      * @description The current value of the text field. It is always a string.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    value: string;
+    value?: string;
     /**
      * @description An optional prefix to display before the input value.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    prefixText: string;
+    prefixText?: string;
     /**
      * @description An optional suffix to display after the input value.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    suffixText: string;
+    suffixText?: string;
     /**
      * @description Whether or not the text field has a leading icon. Used for SSR.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    hasLeadingIcon: boolean;
+    hasLeadingIcon?: boolean;
     /**
      * @description Whether or not the text field has a trailing icon. Used for SSR.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    hasTrailingIcon: boolean;
+    hasTrailingIcon?: boolean;
     /**
      * @description Conveys additional information below the text field, such as how it should be used.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    supportingText: string;
+    supportingText?: string;
     /**
      * @description Override the input text CSS `direction`. Useful for RTL languages that use LTR notation for fractions.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    textDirection: string;
+    textDirection?: string;
     /**
      * @description The number of rows to display for a `type="textarea"` text field. Defaults to 2.
      * @default 2
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    rows: number;
+    rows?: number;
     /**
      * @description The number of cols to display for a `type="textarea"` text field. Defaults to 20.
      * @default 20
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    cols: number;
+    cols?: number;
     /**
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    inputMode: 'none' | 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search';
+    inputMode?: 'none' | 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search';
     /**
      * @description Defines the greatest value in the range of permitted values.
      *
@@ -2014,7 +2014,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    max: string;
+    max?: string;
     /**
      * @description The maximum number of characters a user can enter into the text field. Set to -1 for none.
      *
@@ -2022,7 +2022,7 @@ declare namespace MaterialWeb {
      * @default -1
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    maxLength: number;
+    maxLength?: number;
     /**
      * @description Defines the most negative value in the range of permitted values.
      *
@@ -2030,7 +2030,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    min: string;
+    min?: string;
     /**
      * @description The minimum number of characters a user can enter into the text field. Set to -1 for none.
      *
@@ -2038,13 +2038,13 @@ declare namespace MaterialWeb {
      * @default -1
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    minLength: number;
+    minLength?: number;
     /**
      * @description When true, hide the spinner for `type="number"` text fields.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    noSpinner: boolean;
+    noSpinner?: boolean;
     /**
      * @description A regular expression that the text field's value must match to pass constraint validation.
      *
@@ -2052,7 +2052,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    pattern: string;
+    pattern?: string;
     /**
      * @description Defines the text displayed in the textfield when it has no value. Provides a brief hint to the user as to the expected type of data that should be entered into the control. Unlike `label`, the placeholder is not visible and does not float when the textfield has a value.
      *
@@ -2060,7 +2060,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    placeholder: string;
+    placeholder?: string;
     /**
      * @description Indicates whether or not a user should be able to edit the text field's value.
      *
@@ -2068,7 +2068,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    readOnly: boolean;
+    readOnly?: boolean;
     /**
      * @description Indicates that input accepts multiple email addresses.
      *
@@ -2076,7 +2076,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    multiple: boolean;
+    multiple?: boolean;
     /**
      * @description Returns or sets the element's step attribute, which works with min and max to limit the increments at which a numeric or date-time value can be set.
      *
@@ -2084,7 +2084,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    step: string;
+    step?: string;
     /**
      * @description The `<input>` type to use, defaults to "text". The type greatly changes how the text field behaves.
      *
@@ -2096,7 +2096,7 @@ declare namespace MaterialWeb {
      * @default 'text'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    type: string;
+    type?: string;
     /**
      * @description Describes what, if any, type of autocomplete functionality the input should provide.
      *
@@ -2104,42 +2104,42 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    autocomplete: string;
+    autocomplete?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    selectionDirection: string;
+    selectionDirection?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    selectionEnd: number;
+    selectionEnd?: number;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    selectionStart: number;
+    selectionStart?: number;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    valueAsNumber: number;
+    valueAsNumber?: number;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
-    valueAsDate: Date;
+    valueAsDate?: Date;
   }
   export interface MdOutlinedTextField<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -2149,7 +2149,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    error: boolean;
+    error?: boolean;
     /**
      * @description The error message that replaces supporting text when `error` is true. If `errorText` is an empty string, then the supporting text will continue to show.
      *
@@ -2157,7 +2157,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    errorText: string;
+    errorText?: string;
     /**
      * @description The floating Material label of the textfield component. It informs the user about what information is requested for a text field. It is aligned with the input text, is always visible, and it floats when focused or when text is entered into the textfield. This label also sets accessibilty labels, but the accessible label is overriden by `aria-label`.
      *
@@ -2165,13 +2165,13 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    label: string;
+    label?: string;
     /**
      * @description Disables the asterisk on the floating label, when the text field is required.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    noAsterisk: boolean;
+    noAsterisk?: boolean;
     /**
      * @description Indicates that the user must specify a value for the input before the owning form can be submitted and will render an error state when `reportValidity()` is invoked when value is empty. Additionally the floating label will render an asterisk `"*"` when true.
      *
@@ -2179,66 +2179,66 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    required: boolean;
+    required?: boolean;
     /**
      * @description The current value of the text field. It is always a string.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    value: string;
+    value?: string;
     /**
      * @description An optional prefix to display before the input value.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    prefixText: string;
+    prefixText?: string;
     /**
      * @description An optional suffix to display after the input value.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    suffixText: string;
+    suffixText?: string;
     /**
      * @description Whether or not the text field has a leading icon. Used for SSR.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    hasLeadingIcon: boolean;
+    hasLeadingIcon?: boolean;
     /**
      * @description Whether or not the text field has a trailing icon. Used for SSR.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    hasTrailingIcon: boolean;
+    hasTrailingIcon?: boolean;
     /**
      * @description Conveys additional information below the text field, such as how it should be used.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    supportingText: string;
+    supportingText?: string;
     /**
      * @description Override the input text CSS `direction`. Useful for RTL languages that use LTR notation for fractions.
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    textDirection: string;
+    textDirection?: string;
     /**
      * @description The number of rows to display for a `type="textarea"` text field. Defaults to 2.
      * @default 2
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    rows: number;
+    rows?: number;
     /**
      * @description The number of cols to display for a `type="textarea"` text field. Defaults to 20.
      * @default 20
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    cols: number;
+    cols?: number;
     /**
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    inputMode: 'none' | 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search';
+    inputMode?: 'none' | 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search';
     /**
      * @description Defines the greatest value in the range of permitted values.
      *
@@ -2246,7 +2246,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    max: string;
+    max?: string;
     /**
      * @description The maximum number of characters a user can enter into the text field. Set to -1 for none.
      *
@@ -2254,7 +2254,7 @@ declare namespace MaterialWeb {
      * @default -1
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    maxLength: number;
+    maxLength?: number;
     /**
      * @description Defines the most negative value in the range of permitted values.
      *
@@ -2262,7 +2262,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    min: string;
+    min?: string;
     /**
      * @description The minimum number of characters a user can enter into the text field. Set to -1 for none.
      *
@@ -2270,13 +2270,13 @@ declare namespace MaterialWeb {
      * @default -1
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    minLength: number;
+    minLength?: number;
     /**
      * @description When true, hide the spinner for `type="number"` text fields.
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    noSpinner: boolean;
+    noSpinner?: boolean;
     /**
      * @description A regular expression that the text field's value must match to pass constraint validation.
      *
@@ -2284,7 +2284,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    pattern: string;
+    pattern?: string;
     /**
      * @description Defines the text displayed in the textfield when it has no value. Provides a brief hint to the user as to the expected type of data that should be entered into the control. Unlike `label`, the placeholder is not visible and does not float when the textfield has a value.
      *
@@ -2292,7 +2292,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    placeholder: string;
+    placeholder?: string;
     /**
      * @description Indicates whether or not a user should be able to edit the text field's value.
      *
@@ -2300,7 +2300,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    readOnly: boolean;
+    readOnly?: boolean;
     /**
      * @description Indicates that input accepts multiple email addresses.
      *
@@ -2308,7 +2308,7 @@ declare namespace MaterialWeb {
      * @default false
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    multiple: boolean;
+    multiple?: boolean;
     /**
      * @description Returns or sets the element's step attribute, which works with min and max to limit the increments at which a numeric or date-time value can be set.
      *
@@ -2316,7 +2316,7 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    step: string;
+    step?: string;
     /**
      * @description The `<input>` type to use, defaults to "text". The type greatly changes how the text field behaves.
      *
@@ -2328,7 +2328,7 @@ declare namespace MaterialWeb {
      * @default 'text'
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    type: string;
+    type?: string;
     /**
      * @description Describes what, if any, type of autocomplete functionality the input should provide.
      *
@@ -2336,42 +2336,42 @@ declare namespace MaterialWeb {
      * @default ''
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    autocomplete: string;
+    autocomplete?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    name: string;
+    name?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    selectionDirection: string;
+    selectionDirection?: string;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    selectionEnd: number;
+    selectionEnd?: number;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    selectionStart: number;
+    selectionStart?: number;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    valueAsNumber: number;
+    valueAsNumber?: number;
     /**
      * @default undefined
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
-    valueAsDate: Date;
+    valueAsDate?: Date;
   }
   export interface MdIcon<T> extends SolidJS.JSX.HTMLAttributes<T> {}
 }
