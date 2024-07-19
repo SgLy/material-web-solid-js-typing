@@ -16,10 +16,15 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: __dirname,
+      },
       extends: [
-        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:prettier/recommended',
-        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'prettier',
         'plugin:import/typescript',
       ],
@@ -29,6 +34,8 @@ module.exports = {
           'error',
           { prefer: 'type-imports', fixStyle: 'separate-type-imports', disallowTypeAnnotations: false },
         ],
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
       },
     },
     {
