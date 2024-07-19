@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type * as SolidJS from 'solid-js';
 
+type SelectOption = any;
+type Reason = any;
+
 declare namespace MaterialWeb {
   export interface MdElevatedButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -329,6 +332,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
      */
     name?: string;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/checkbox.md#mdcheckbox-md-checkbox
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
   }
   export interface MdChipSet<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -384,6 +415,20 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
      */
     hasIcon?: boolean;
+    /**
+     * @description Dispatched when `disabled` is toggled.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
+     */
+    onUpdateFocus?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when `disabled` is toggled.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdassistchip-md-assist-chip
+     */
+    onupdatefocus?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdFilterChip<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -449,6 +494,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
      */
     ariaLabelRemove?: string;
+    /**
+     * @description Dispatched when the remove button is clicked.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
+     */
+    onRemove?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the remove button is clicked.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
+     */
+    onremove?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when `disabled` is toggled.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
+     */
+    onUpdateFocus?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when `disabled` is toggled.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdfilterchip-md-filter-chip
+     */
+    onupdatefocus?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdInputChip<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -516,6 +589,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
      */
     ariaLabelRemove?: string;
+    /**
+     * @description Dispatched when the remove button is clicked.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
+     */
+    onRemove?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the remove button is clicked.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
+     */
+    onremove?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when `disabled` is toggled.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
+     */
+    onUpdateFocus?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when `disabled` is toggled.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdinputchip-md-input-chip
+     */
+    onupdatefocus?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdSuggestionChip<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -563,6 +664,20 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
      */
     hasIcon?: boolean;
+    /**
+     * @description Dispatched when `disabled` is toggled.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
+     */
+    onUpdateFocus?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when `disabled` is toggled.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/chip.md#mdsuggestionchip-md-suggestion-chip
+     */
+    onupdatefocus?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdDialog<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -614,6 +729,76 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
      */
     getCloseAnimation?: () => any;
+    /**
+     * @description Dispatched when the dialog is opening before any animations.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onOpen?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog is opening before any animations.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onopen?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog has opened after any animations.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onOpened?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog has opened after any animations.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onopened?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog is closing before any animations.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onClose?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog is closing before any animations.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onclose?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog has closed after any animations.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onClosed?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog has closed after any animations.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onclosed?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog has been canceled by clicking on the scrim or pressing Escape.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    onCancel?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the dialog has been canceled by clicking on the scrim or pressing Escape.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/dialog.md#mddialog-md-dialog
+     */
+    oncancel?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdDivider<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -714,6 +899,20 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/focus-ring.md#mdfocusring-md-focus-ring
      */
     control?: HTMLElement;
+    /**
+     * @description Fired whenever `visible` changes.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/focus-ring.md#mdfocusring-md-focus-ring
+     */
+    onVisibilityChanged?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired whenever `visible` changes.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/focus-ring.md#mdfocusring-md-focus-ring
+     */
+    onvisibilitychanged?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdIconButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -785,6 +984,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
      */
     labels?: NodeList;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdiconbutton-md-icon-button
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
   }
   export interface MdFilledIconButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -862,6 +1089,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
      */
     labels?: NodeList;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfillediconbutton-md-filled-icon-button
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
   }
   export interface MdFilledTonalIconButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -933,6 +1188,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
      */
     labels?: NodeList;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdfilledtonaliconbutton-md-filled-tonal-icon-button
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
   }
   export interface MdOutlinedIconButton<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1004,6 +1287,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
      */
     labels?: NodeList;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when a toggle button toggles
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/icon-button.md#mdoutlinediconbutton-md-outlined-icon-button
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
   }
   export interface MdList<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1038,6 +1349,20 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlistitem-md-list-item
      */
     target?: string;
+    /**
+     * @description Requests the list to set `tabindex=0` on the item and focus it.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlistitem-md-list-item
+     */
+    onRequestActivation?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the list to set `tabindex=0` on the item and focus it.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/list.md#mdlistitem-md-list-item
+     */
+    onrequestactivation?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdMenu<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1189,6 +1514,62 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
      */
     items?: HTMLElement[];
+    /**
+     * @description Fired before the opening animation begins
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
+     */
+    onOpening?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired before the opening animation begins
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
+     */
+    onopening?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired once the menu is open, after any animations
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
+     */
+    onOpened?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired once the menu is open, after any animations
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
+     */
+    onopened?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired before the closing animation begins
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
+     */
+    onClosing?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired before the closing animation begins
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
+     */
+    onclosing?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired once the menu is closed, after any animations
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
+     */
+    onClosed?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired once the menu is closed, after any animations
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenu-md-menu
+     */
+    onclosed?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdMenuItem<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1232,6 +1613,26 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
      */
     typeaheadText?: string;
+    /**
+     * @description Closes the encapsulating menu on closable interaction.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
+     */
+    onCloseMenu?: SolidJS.JSX.EventHandlerUnion<
+      T,
+      CustomEvent<{ initiator: SelectOption; reason: Reason; itemPath: SelectOption[] }>
+    >;
+    /**
+     * @description Closes the encapsulating menu on closable interaction.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdmenuitem-md-menu-item
+     */
+    onclosemenu?: SolidJS.JSX.EventHandlerUnion<
+      T,
+      CustomEvent<{ initiator: SelectOption; reason: Reason; itemPath: SelectOption[] }>
+    >;
   }
   export interface MdSubMenu<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1276,6 +1677,62 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
      */
     menu?: HTMLElement;
+    /**
+     * @description Requests the parent menu to deselect other items when a submenu opens.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
+     */
+    onDeactivateItems?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent menu to deselect other items when a submenu opens.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
+     */
+    ondeactivateitems?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent to make the slotted item focusable and focus the item.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
+     */
+    onRequestActivation?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent to make the slotted item focusable and focus the item.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
+     */
+    onrequestactivation?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent menu to deactivate the typeahead functionality when a submenu opens.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
+     */
+    onDeactivateTypeahead?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent menu to deactivate the typeahead functionality when a submenu opens.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
+     */
+    ondeactivatetypeahead?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent menu to activate the typeahead functionality when a submenu closes.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
+     */
+    onActivateTypeahead?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent menu to activate the typeahead functionality when a submenu closes.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/menu.md#mdsubmenu-md-sub-menu
+     */
+    onactivatetypeahead?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdLinearProgress<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1363,6 +1820,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
      */
     name?: string;
+    /**
+     * @description Dispatched when the value changes from user interaction.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when the value changes from user interaction.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Dispatched when the value changes from user interaction.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description Dispatched when the value changes from user interaction.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/radio.md#mdradio-md-radio
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
   }
   export interface MdRipple<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1499,6 +1984,90 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
      */
     selectedOptions?: HTMLElement[];
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Fired when the select's menu is about to open.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onOpening?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu is about to open.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onopening?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu has finished animations and opened.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onOpened?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu has finished animations and opened.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onopened?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu is about to close.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onClosing?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu is about to close.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onclosing?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu has finished animations and closed.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onClosed?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu has finished animations and closed.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdfilledselect-md-filled-select
+     */
+    onclosed?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdOutlinedSelect<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1617,6 +2186,90 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
      */
     selectedOptions?: HTMLElement[];
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Fired when the select's menu is about to open.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onOpening?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu is about to open.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onopening?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu has finished animations and opened.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onOpened?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu has finished animations and opened.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onopened?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu is about to close.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onClosing?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu is about to close.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onclosing?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu has finished animations and closed.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onClosed?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the select's menu has finished animations and closed.
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdoutlinedselect-md-outlined-select
+     */
+    onclosed?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdSelectOption<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1652,6 +2305,54 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
      */
     displayText?: string;
+    /**
+     * @description Closes the encapsulating menu on closable interaction.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
+     */
+    onCloseMenu?: SolidJS.JSX.EventHandlerUnion<
+      T,
+      CustomEvent<{ initiator: SelectOption; reason: Reason; itemPath: SelectOption[] }>
+    >;
+    /**
+     * @description Closes the encapsulating menu on closable interaction.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
+     */
+    onclosemenu?: SolidJS.JSX.EventHandlerUnion<
+      T,
+      CustomEvent<{ initiator: SelectOption; reason: Reason; itemPath: SelectOption[] }>
+    >;
+    /**
+     * @description Requests the parent md-select to select this element (and deselect others if single-selection) when `selected` changed to `true`.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
+     */
+    onRequestSelection?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent md-select to select this element (and deselect others if single-selection) when `selected` changed to `true`.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
+     */
+    onrequestselection?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent md-select to deselect this element when `selected` changed to `false`.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
+     */
+    onRequestDeselection?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description Requests the parent md-select to deselect this element when `selected` changed to `false`.
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/select.md#mdselectoption-md-select-option
+     */
+    onrequestdeselection?: SolidJS.JSX.EventHandlerUnion<T, Event>;
   }
   export interface MdSlider<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1770,6 +2471,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
      */
     nameEnd?: string;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/slider.md#mdslider-md-slider
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
   }
   export interface MdSwitch<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1814,6 +2543,34 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
      */
     name?: string;
+    /**
+     * @description Fired whenever `selected` changes due to user interaction (bubbles and composed).
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Fired whenever `selected` changes due to user interaction (bubbles and composed).
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description Fired whenever `selected` changes due to user interaction (bubbles).
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description Fired whenever `selected` changes due to user interaction (bubbles).
+     * @bubbles No
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/switch.md#mdswitch-md-switch
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
   }
   export interface MdTabs<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -1840,6 +2597,20 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdtabs-md-tabs
      */
     activeTab?: HTMLElement;
+    /**
+     * @description Fired when the selected tab changes. The target's `activeTabIndex` or `activeTab` provide information about the selection change. The change event is fired when a user interaction like a space/enter key or click cause a selection change. The tab selection based on these actions can be cancelled by calling preventDefault on the triggering `keydown` or `click` event.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdtabs-md-tabs
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description Fired when the selected tab changes. The target's `activeTabIndex` or `activeTab` provide information about the selection change. The change event is fired when a user interaction like a space/enter key or click cause a selection change. The tab selection based on these actions can be cancelled by calling preventDefault on the triggering `keydown` or `click` event.
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/tabs.md#mdtabs-md-tabs
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
   }
   export interface MdPrimaryTab<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -2140,6 +2911,48 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
      */
     valueAsDate?: Date;
+    /**
+     * @description The native `select` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
+     */
+    onSelect?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description The native `select` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
+     */
+    onselect?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdfilledtextfield-md-filled-text-field
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
   }
   export interface MdOutlinedTextField<T> extends SolidJS.JSX.HTMLAttributes<T> {
     /**
@@ -2372,8 +3185,50 @@ declare namespace MaterialWeb {
      * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
      */
     valueAsDate?: Date;
+    /**
+     * @description The native `select` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
+     */
+    onSelect?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description The native `select` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
+     */
+    onselect?: SolidJS.JSX.EventHandlerUnion<T, Event>;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
+     */
+    onChange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `change` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+     * @bubbles Yes
+     * @composed No
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
+     */
+    onchange?: SolidJS.JSX.ChangeEventHandlerUnion<T, Event>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
+     */
+    onInput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
+    /**
+     * @description The native `input` event on [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+     * @bubbles Yes
+     * @composed Yes
+     * @link https://github.com/material-components/material-web/blob/main/docs/components/text-field.md#mdoutlinedtextfield-md-outlined-text-field
+     */
+    oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
   }
-  export interface MdIcon<T> extends SolidJS.JSX.HTMLAttributes<T> {}
+  export type MdIcon<T> = SolidJS.JSX.HTMLAttributes<T>;
 }
 
 declare module 'solid-js' {

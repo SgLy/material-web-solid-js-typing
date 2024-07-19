@@ -2,61 +2,75 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as marked from 'marked';
 
-import { assert, copy, escape, format } from './utils';
+import { assert, escape, format, snakeToCamel } from './utils';
 
 import './marked-polyfill';
 
-type TokenVerifier = (token: marked.Token) => boolean;
-type Processor<T extends Record<string, unknown>> = (token: marked.Token, context: Partial<T>) => void;
-
-const tokenIterator = <T extends Record<string, unknown>>(tokens: marked.TokensList, initialContext: Partial<T>) => {
-  const verifiers: Array<TokenVerifier> = [];
-  const processors: Array<Processor<T>> = [];
-  const contexts: Array<Partial<T>> = [copy(initialContext)];
-  return {
-    add(verifier: TokenVerifier, processor?: Processor<T>) {
-      verifiers.push(verifier);
-      processors.push(processor || (() => {}));
-      return this;
-    },
-    process() {
-      let nextLevel = 0;
-      const results: Array<T> = [];
-      tokens.forEach(token => {
-        const minSatisfiedTokenLevel = verifiers.findIndex(v => v(token));
-        if (minSatisfiedTokenLevel === nextLevel) {
-          const context: Partial<T> = copy(contexts[nextLevel]);
-          processors[minSatisfiedTokenLevel](token, context);
-          contexts.push(context);
-          nextLevel++;
-          if (nextLevel === processors.length) {
-            nextLevel = 0;
-            contexts.length = 1;
-            results.push(context as T);
-          }
-        } else if (minSatisfiedTokenLevel !== -1 && minSatisfiedTokenLevel < nextLevel) {
-          nextLevel = minSatisfiedTokenLevel;
-          contexts.length = minSatisfiedTokenLevel + 1;
-        }
-      });
-      return results;
-    },
+type Verifier = (token: marked.Token) => boolean;
+type OnceFn = (predicate: Verifier) => { then(fn: ThenFn): void };
+type ThenFn = (token: marked.Token, once: OnceFn, done: (doneFn: () => void) => void) => void;
+const iterateTokens = (tokens: marked.TokensList, fn: (onceFn: OnceFn) => void) => {
+  const callThenFn = (currentIndex: number, maxIndex: number, thenFn: ThenFn) => {
+    const branches: { predicate: Verifier; processor: ThenFn }[] = [];
+    let doneFn = () => {};
+    thenFn(
+      tokens[currentIndex],
+      predicate => ({
+        then(fn) {
+          branches.push({ predicate, processor: fn });
+        },
+      }),
+      fn => {
+        doneFn = fn;
+      },
+    );
+    const satisfiedIndex: [index: number, branch: number][] = [];
+    for (let i = currentIndex + 1; i < maxIndex; ++i) {
+      for (let j = 0; j < branches.length; ++j) {
+        if (!branches[j].predicate(tokens[i])) continue;
+        satisfiedIndex.push([i, j]);
+        break;
+      }
+    }
+    for (let i = 0; i < satisfiedIndex.length; ++i) {
+      const [index, branch] = satisfiedIndex[i];
+      const nextIndex = i + 1 < satisfiedIndex.length ? satisfiedIndex[i + 1][0] : maxIndex;
+      callThenFn(index, nextIndex, branches[branch].processor);
+    }
+    if (typeof doneFn === 'function') doneFn();
   };
+
+  callThenFn(-1, tokens.length, (_, onceFn) => {
+    fn(onceFn);
+  });
 };
 
-type Context = {
+interface Context {
   name: string;
   tagName: string;
   file: string;
-  properties: Array<{
+  properties: {
     name: string;
     type: string;
     defaultValue: string;
     description: string;
-  }>;
-};
+  }[];
+  events: {
+    name: string;
+    type: string;
+    bubbles: string;
+    composed: string;
+    description: string;
+  }[];
+  methods: {
+    name: string;
+    parameters: string[];
+    returns: string;
+    description: string;
+  }[];
+}
 
-const components: Array<Context> = [];
+const components: Context[] = [];
 
 const docsFolder = path.join(__dirname, '..', 'material-web', 'docs', 'components');
 
@@ -66,36 +80,73 @@ fs.readdirSync(docsFolder).forEach(f => {
   const str = fs.readFileSync(path.join(docsFolder, f)).toString();
   const tokens = marked.lexer(str, { gfm: true });
 
-  const parsed = tokenIterator<Context>(tokens, {})
-    .add(
-      heading => heading.isHeading() && heading.depth === 3 && (heading.tokens?.length || 0) > 3,
-      (heading, context) => {
-        context.name = heading.asHeading()?.tokens[0].asText()?.text.trim();
-        const tagName = escape(heading.asHeading()?.tokens[2].asText()?.text.trim() || '');
-        context.tagName = tagName.slice(1, tagName.length - 1);
-        const anchor = `${context.name!}-${context.tagName!}`.toLowerCase();
-        context.file = `${f}#${anchor}`;
-      },
-    )
-    .add(t => t.type === 'heading' && t.text === 'Properties')
-    .add(
-      t => t.type === 'table',
-      (table, context) => {
-        context.properties = [];
-        table.asTable()!.rows.forEach(row => {
-          assert(row[0].tokens.length === 1 && row[0].tokens[0].isCodespan());
-          assert(row[2].tokens.length === 1 && row[0].tokens[0].isCodespan());
-          assert(row[3].tokens.length === 1 && row[0].tokens[0].isCodespan());
-          context.properties!.push({
-            name: escape(row[0].tokens[0]?.asCodespan()?.text || ''),
-            type: escape(row[2].tokens[0]?.asCodespan()?.text || ''),
-            defaultValue: escape(row[3].tokens[0]?.asCodespan()?.text || ''),
-            description: escape(row[4].text || ''),
+  const parsed: Context[] = [];
+  iterateTokens(tokens, once => {
+    once(heading => heading.isHeading() && heading.depth === 3 && (heading.tokens.length || 0) > 3).then(
+      (heading, once, done) => {
+        const name = heading.asHeading()?.tokens[0].asText()?.text.trim() ?? '';
+        const rawTagName = escape(heading.asHeading()?.tokens[2].asText()?.text.trim() ?? '');
+        const tagName = rawTagName.slice(1, rawTagName.length - 1);
+        const anchor = `${name}-${tagName}`.toLowerCase();
+        const file = `${f}#${anchor}`;
+        const context: Context = {
+          name,
+          properties: [],
+          events: [],
+          methods: [],
+          file,
+          tagName,
+        };
+        once(t => t.type === 'heading' && t.text === 'Properties').then((_, once) => {
+          once(t => t.type === 'table').then(table => {
+            table.asTable()!.rows.forEach(row => {
+              assert(row[0].tokens.length === 1 && row[0].tokens[0].isCodespan());
+              assert(row[2].tokens.length === 1 && row[2].tokens[0].isCodespan());
+              assert(row[3].tokens.length === 1 && row[3].tokens[0].isCodespan());
+              context.properties.push({
+                name: escape(row[0].tokens[0]?.asCodespan()?.text ?? ''),
+                type: escape(row[2].tokens[0]?.asCodespan()?.text ?? ''),
+                defaultValue: escape(row[3].tokens[0]?.asCodespan()?.text ?? ''),
+                description: escape(row[4].text || ''),
+              });
+            });
           });
         });
+        once(t => t.type === 'heading' && t.text === 'Events').then((_, once) => {
+          once(t => t.type === 'table').then(table => {
+            table.asTable()!.rows.forEach(row => {
+              assert(row[0].tokens.length === 1 && row[0].tokens[0].isCodespan());
+              assert(row[1].tokens.length === 1 && row[1].tokens[0].isCodespan());
+              context.events.push({
+                name: escape(row[0].tokens[0]?.asCodespan()?.text ?? ''),
+                type: escape(row[1].tokens[0]?.asCodespan()?.text ?? ''),
+                bubbles: escape(row[2].text || ''),
+                composed: escape(row[3].text || ''),
+                description: escape(row[4].text || ''),
+              });
+            });
+          });
+        });
+        once(t => t.type === 'heading' && t.text === 'Methods').then((_, once) => {
+          once(t => t.type === 'table').then(table => {
+            table.asTable()!.rows.forEach(row => {
+              // assert(row[0].tokens.length === 1 && row[0].tokens[0].isCodespan());
+              // assert(row[1].tokens.length === 1);
+              context.methods.push({
+                name: escape(row[0].tokens[0]?.asCodespan()?.text ?? ''),
+                parameters: [escape(row[1].tokens[0]?.asCodespan()?.text ?? '')],
+                returns: escape(row[2].tokens[0]?.asCodespan()?.text ?? ''),
+                description: escape(row[3].text || ''),
+              });
+            });
+          });
+        });
+        done(() => {
+          parsed.push(context);
+        });
       },
-    )
-    .process();
+    );
+  });
 
   components.push(...parsed);
 });
@@ -106,6 +157,8 @@ components.push({
   name: 'MdIcon',
   tagName: 'md-icon',
   properties: [],
+  events: [],
+  methods: [],
 });
 
 const typeMap = new Map<string, string>();
@@ -127,6 +180,9 @@ components.forEach(c => {
 const result = `
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type * as SolidJS from 'solid-js';
+
+type SelectOption = any;
+type Reason = any;
 
 declare namespace MaterialWeb {
   ${components
@@ -153,7 +209,49 @@ declare namespace MaterialWeb {
           return ret.join('\n');
         })
         .join('\n');
-      return `export interface ${c.name}<T> extends SolidJS.JSX.HTMLAttributes<T> {${properties}}`;
+      const events = c.events
+        .map(p => {
+          const ret: string[] = ['/**'];
+          if (p.description !== '') {
+            const description = p.description.split('<br>').join('\n * \n * ');
+            ret.push(` * @description ${description}`);
+          }
+          const type = p.type;
+          const camel = snakeToCamel('on-' + p.name);
+          ret.push(` * @bubbles ${p.bubbles}`);
+          ret.push(` * @composed ${p.composed}`);
+          ret.push(` * @link https://github.com/material-components/material-web/blob/main/docs/components/${c.file}`);
+          ret.push(' */');
+          // onBeforeInput?: InputEventHandlerUnion<T, InputEvent>;
+          // onBlur?: FocusEventHandlerUnion<T, FocusEvent>;
+          // onChange?: ChangeEventHandlerUnion<T, Event>;
+          // onFocus?: FocusEventHandlerUnion<T, FocusEvent>;
+          // onInput?: InputEventHandlerUnion<T, InputEvent>;
+          const handler = (() => {
+            switch (p.name) {
+              case 'before-input':
+                return 'InputEventHandlerUnion';
+              case 'blur':
+                return 'FocusEventHandlerUnion';
+              case 'change':
+                return 'ChangeEventHandlerUnion';
+              case 'focus':
+                return 'FocusEventHandlerUnion';
+              case 'input':
+                return 'InputEventHandlerUnion';
+              default:
+                return 'EventHandlerUnion';
+            }
+          })();
+          return [
+            ...ret,
+            `${camel}?: SolidJS.JSX.${handler}<T, ${type}>;`,
+            ...ret,
+            `${camel.toLowerCase()}?: SolidJS.JSX.${handler}<T, ${type}>;`,
+          ].join('\n');
+        })
+        .join('\n');
+      return `export interface ${c.name}<T> extends SolidJS.JSX.HTMLAttributes<T> {${properties}\n${events}}`;
     })
     .join('\n')}
 }
@@ -176,7 +274,11 @@ declare module 'solid-js' {
 
 const outputDir = path.join(__dirname, '..', 'dist');
 const outputFilename = 'material-web-tags.d.ts';
-format(outputFilename, result).then(formatted => {
-  fs.mkdirSync(outputDir, { recursive: true });
-  fs.writeFileSync(path.join(outputDir, outputFilename), formatted || '');
-});
+format(outputFilename, result)
+  .then(formatted => {
+    fs.mkdirSync(outputDir, { recursive: true });
+    fs.writeFileSync(path.join(outputDir, outputFilename), formatted ?? '');
+  })
+  .catch((err: unknown) => {
+    console.error(err);
+  });

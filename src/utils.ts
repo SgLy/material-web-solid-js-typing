@@ -40,3 +40,13 @@ export const format = async (filename: string, str: string) => {
 
   return results[0].output ?? results[0].source;
 };
+
+export const snakeToCamel = (name: string) => {
+  return name
+    .split('-')
+    .map((segment, index) => {
+      if (index === 0) return segment;
+      return segment[0].toUpperCase() + segment.slice(1);
+    })
+    .join('');
+};
