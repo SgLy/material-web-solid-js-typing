@@ -160,6 +160,14 @@ components.push({
   events: [],
   methods: [],
 });
+components.push({
+  file: 'elevation.md',
+  name: 'MdElevation',
+  tagName: 'md-elevation',
+  properties: [],
+  events: [],
+  methods: [],
+});
 
 const typeMap = new Map<string, string>();
 typeMap.set('HTMLElement & Partial<SurfacePositionTarget>', 'HTMLElement');

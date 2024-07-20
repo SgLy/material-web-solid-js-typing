@@ -3229,6 +3229,7 @@ declare namespace MaterialWeb {
     oninput?: SolidJS.JSX.InputEventHandlerUnion<T, InputEvent>;
   }
   export type MdIcon<T> = SolidJS.JSX.HTMLAttributes<T>;
+  export type MdElevation<T> = SolidJS.JSX.HTMLAttributes<T>;
 }
 
 declare module 'solid-js' {
@@ -3314,6 +3315,8 @@ declare module 'solid-js' {
       'md-outlined-text-field': MaterialWeb.MdOutlinedTextField<HTMLElement>;
       /** @link https://github.com/material-components/material-web/blob/main/docs/components/icon.md */
       'md-icon': MaterialWeb.MdIcon<HTMLElement>;
+      /** @link https://github.com/material-components/material-web/blob/main/docs/components/elevation.md */
+      'md-elevation': MaterialWeb.MdElevation<HTMLElement>;
     }
   }
 }
