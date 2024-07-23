@@ -48,7 +48,7 @@ const iterateTokens = (tokens: marked.TokensList, fn: (onceFn: OnceFn) => void) 
 interface Context {
   name: string;
   tagName: string;
-  file: string;
+  link: string;
   properties: {
     name: string;
     type: string;
@@ -87,14 +87,14 @@ fs.readdirSync(docsFolder).forEach(f => {
         const name = heading.asHeading()?.tokens[0].asText()?.text.trim() ?? '';
         const rawTagName = escape(heading.asHeading()?.tokens[2].asText()?.text.trim() ?? '');
         const tagName = rawTagName.slice(1, rawTagName.length - 1);
-        const anchor = `${name}-${tagName}`.toLowerCase();
-        const file = `${f}#${anchor}`;
+        const anchor = `${tagName.replace(/-/g, '')}-less${tagName}greater`;
+        const link = `${f.slice(0, f.length - 3)}/#${anchor}`;
         const context: Context = {
           name,
           properties: [],
           events: [],
           methods: [],
-          file,
+          link,
           tagName,
         };
         once(t => t.type === 'heading' && t.text === 'Properties').then((_, once) => {
@@ -153,7 +153,7 @@ fs.readdirSync(docsFolder).forEach(f => {
 
 // dirty quick fix for md-icon which has no `Properties` section
 components.push({
-  file: 'icon.md',
+  link: 'icon.md',
   name: 'MdIcon',
   tagName: 'md-icon',
   properties: [],
@@ -161,7 +161,7 @@ components.push({
   methods: [],
 });
 components.push({
-  file: 'elevation.md',
+  link: 'elevation.md',
   name: 'MdElevation',
   tagName: 'md-elevation',
   properties: [],
@@ -211,7 +211,7 @@ declare namespace MaterialWeb {
           if (p.name === 'inputMode') {
             type = '"none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search"';
           }
-          ret.push(` * @link https://github.com/material-components/material-web/blob/main/docs/components/${c.file}`);
+          ret.push(` * @link https://material-web.dev/components/${c.link}`);
           ret.push(' */');
           ret.push(`${p.name}${p.defaultValue !== '' ? '?' : ''}: ${type};`);
           return ret.join('\n');
@@ -228,7 +228,7 @@ declare namespace MaterialWeb {
           const camel = snakeToCamel('on-' + p.name);
           ret.push(` * @bubbles ${p.bubbles}`);
           ret.push(` * @composed ${p.composed}`);
-          ret.push(` * @link https://github.com/material-components/material-web/blob/main/docs/components/${c.file}`);
+          ret.push(` * @link https://material-web.dev/components/${c.link}`);
           ret.push(' */');
           // onBeforeInput?: InputEventHandlerUnion<T, InputEvent>;
           // onBlur?: FocusEventHandlerUnion<T, FocusEvent>;
@@ -270,7 +270,7 @@ declare module 'solid-js' {
       ${components
         .map(c =>
           [
-            `/** @link https://github.com/material-components/material-web/blob/main/docs/components/${c.file} */`,
+            `/** @link https://material-web.dev/components/${c.link} */`,
             `'${c.tagName}': MaterialWeb.${c.name}<HTMLElement>;`,
           ].join('\n'),
         )
