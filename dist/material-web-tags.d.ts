@@ -1454,6 +1454,18 @@ declare namespace MaterialWeb {
      */
     menuCorner?: string;
     /**
+     * @description Disable the `flip` behavior that usually happens on the horizontal axis when the surface would render outside the viewport.
+     * @default false
+     * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
+     */
+    noHorizontalFlip?: boolean;
+    /**
+     * @description Disable the `flip` behavior that usually happens on the vertical axis when the surface would render outside the viewport.
+     * @default false
+     * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
+     */
+    noVerticalFlip?: boolean;
+    /**
      * @description Keeps the user clicks outside the menu.
      *
      * NOTE: clicking outside may still cause focusout to close the menu so see `stayOpenOnFocusout`.
