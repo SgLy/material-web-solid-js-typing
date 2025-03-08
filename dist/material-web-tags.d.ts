@@ -13,7 +13,9 @@ declare namespace MaterialWeb {
      */
     disabled?: boolean;
     /**
-     * @description Whether the button is "soft-disabled" (disabled but still focusable).
+     * @description Whether or not the button is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
      * @default false
      * @link https://material-web.dev/components/button/#mdelevatedbutton-lessmd-elevated-buttongreater
      */
@@ -75,6 +77,14 @@ declare namespace MaterialWeb {
      */
     disabled?: boolean;
     /**
+     * @description Whether or not the button is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/button/#mdfilledbutton-lessmd-filled-buttongreater
+     */
+    softDisabled?: boolean;
+    /**
      * @description The URL that the link button points to.
      * @default ''
      * @link https://material-web.dev/components/button/#mdfilledbutton-lessmd-filled-buttongreater
@@ -130,6 +140,14 @@ declare namespace MaterialWeb {
      * @link https://material-web.dev/components/button/#mdfilledtonalbutton-lessmd-filled-tonal-buttongreater
      */
     disabled?: boolean;
+    /**
+     * @description Whether or not the button is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/button/#mdfilledtonalbutton-lessmd-filled-tonal-buttongreater
+     */
+    softDisabled?: boolean;
     /**
      * @description The URL that the link button points to.
      * @default ''
@@ -187,6 +205,14 @@ declare namespace MaterialWeb {
      */
     disabled?: boolean;
     /**
+     * @description Whether or not the button is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/button/#mdoutlinedbutton-lessmd-outlined-buttongreater
+     */
+    softDisabled?: boolean;
+    /**
      * @description The URL that the link button points to.
      * @default ''
      * @link https://material-web.dev/components/button/#mdoutlinedbutton-lessmd-outlined-buttongreater
@@ -242,6 +268,14 @@ declare namespace MaterialWeb {
      * @link https://material-web.dev/components/button/#mdtextbutton-lessmd-text-buttongreater
      */
     disabled?: boolean;
+    /**
+     * @description Whether or not the button is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/button/#mdtextbutton-lessmd-text-buttongreater
+     */
+    softDisabled?: boolean;
     /**
      * @description The URL that the link button points to.
      * @default ''
@@ -394,6 +428,14 @@ declare namespace MaterialWeb {
      */
     disabled?: boolean;
     /**
+     * @description Whether or not the chip is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a chip needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/chip/#mdassistchip-lessmd-assist-chipgreater
+     */
+    softDisabled?: boolean;
+    /**
      * @description When true, allow disabled chips to be focused with arrow keys.
      *
      * Add this when a chip needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
@@ -462,6 +504,14 @@ declare namespace MaterialWeb {
      * @link https://material-web.dev/components/chip/#mdfilterchip-lessmd-filter-chipgreater
      */
     disabled?: boolean;
+    /**
+     * @description Whether or not the chip is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a chip needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/chip/#mdfilterchip-lessmd-filter-chipgreater
+     */
+    softDisabled?: boolean;
     /**
      * @description When true, allow disabled chips to be focused with arrow keys.
      *
@@ -558,6 +608,14 @@ declare namespace MaterialWeb {
      */
     disabled?: boolean;
     /**
+     * @description Whether or not the chip is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a chip needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/chip/#mdinputchip-lessmd-input-chipgreater
+     */
+    softDisabled?: boolean;
+    /**
      * @description When true, allow disabled chips to be focused with arrow keys.
      *
      * Add this when a chip needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
@@ -642,6 +700,14 @@ declare namespace MaterialWeb {
      * @link https://material-web.dev/components/chip/#mdsuggestionchip-lessmd-suggestion-chipgreater
      */
     disabled?: boolean;
+    /**
+     * @description Whether or not the chip is "soft-disabled" (disabled but still focusable).
+     *
+     * Use this when a chip needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/chip/#mdsuggestionchip-lessmd-suggestion-chipgreater
+     */
+    softDisabled?: boolean;
     /**
      * @description When true, allow disabled chips to be focused with arrow keys.
      *
@@ -922,6 +988,14 @@ declare namespace MaterialWeb {
      */
     disabled?: boolean;
     /**
+     * @description "Soft-disables" the icon button (disabled but still focusable).
+     *
+     * Use this when an icon button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/icon-button/#mdiconbutton-lessmd-icon-buttongreater
+     */
+    softDisabled?: boolean;
+    /**
      * @description Flips the icon if it is in an RTL context at startup.
      * @default false
      * @link https://material-web.dev/components/icon-button/#mdiconbutton-lessmd-icon-buttongreater
@@ -1022,6 +1096,8 @@ declare namespace MaterialWeb {
     disabled?: boolean;
     /**
      * @description "Soft-disables" the icon button (disabled but still focusable).
+     *
+     * Use this when an icon button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
      * @default false
      * @link https://material-web.dev/components/icon-button/#mdfillediconbutton-lessmd-filled-icon-buttongreater
      */
@@ -1126,6 +1202,14 @@ declare namespace MaterialWeb {
      */
     disabled?: boolean;
     /**
+     * @description "Soft-disables" the icon button (disabled but still focusable).
+     *
+     * Use this when an icon button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/icon-button/#mdfilledtonaliconbutton-lessmd-filled-tonal-icon-buttongreater
+     */
+    softDisabled?: boolean;
+    /**
      * @description Flips the icon if it is in an RTL context at startup.
      * @default false
      * @link https://material-web.dev/components/icon-button/#mdfilledtonaliconbutton-lessmd-filled-tonal-icon-buttongreater
@@ -1224,6 +1308,14 @@ declare namespace MaterialWeb {
      * @link https://material-web.dev/components/icon-button/#mdoutlinediconbutton-lessmd-outlined-icon-buttongreater
      */
     disabled?: boolean;
+    /**
+     * @description "Soft-disables" the icon button (disabled but still focusable).
+     *
+     * Use this when an icon button needs increased visibility when disabled. See https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_disabled_controls for more guidance on when this is needed.
+     * @default false
+     * @link https://material-web.dev/components/icon-button/#mdoutlinediconbutton-lessmd-outlined-icon-buttongreater
+     */
+    softDisabled?: boolean;
     /**
      * @description Flips the icon if it is in an RTL context at startup.
      * @default false
@@ -1432,28 +1524,6 @@ declare namespace MaterialWeb {
      */
     yOffset?: number;
     /**
-     * @description The max time between the keystrokes of the typeahead menu behavior before it clears the typeahead buffer.
-     * @default 200
-     * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
-     */
-    typeaheadDelay?: number;
-    /**
-     * @description The corner of the anchor which to align the menu in the standard logical property style of <block>-<inline> e.g. `'end-start'`.
-     *
-     * NOTE: This value may not be respected by the menu positioning algorithm if the menu would render outisde the viewport.
-     * @default Corner.END_START
-     * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
-     */
-    anchorCorner?: string;
-    /**
-     * @description The corner of the menu which to align the anchor in the standard logical property style of <block>-<inline> e.g. `'start-start'`.
-     *
-     * NOTE: This value may not be respected by the menu positioning algorithm if the menu would render outisde the viewport.
-     * @default Corner.START_START
-     * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
-     */
-    menuCorner?: string;
-    /**
      * @description Disable the `flip` behavior that usually happens on the horizontal axis when the surface would render outside the viewport.
      * @default false
      * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
@@ -1465,6 +1535,28 @@ declare namespace MaterialWeb {
      * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
      */
     noVerticalFlip?: boolean;
+    /**
+     * @description The max time between the keystrokes of the typeahead menu behavior before it clears the typeahead buffer.
+     * @default 200
+     * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
+     */
+    typeaheadDelay?: number;
+    /**
+     * @description The corner of the anchor which to align the menu in the standard logical property style of <block>-<inline> e.g. `'end-start'`.
+     *
+     * NOTE: This value may not be respected by the menu positioning algorithm if the menu would render outisde the viewport. Use `no-horizontal-flip` or `no-vertical-flip` to force the usage of the value
+     * @default Corner.END_START
+     * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
+     */
+    anchorCorner?: string;
+    /**
+     * @description The corner of the menu which to align the anchor in the standard logical property style of <block>-<inline> e.g. `'start-start'`.
+     *
+     * NOTE: This value may not be respected by the menu positioning algorithm if the menu would render outisde the viewport. Use `no-horizontal-flip` or `no-vertical-flip` to force the usage of the value
+     * @default Corner.START_START
+     * @link https://material-web.dev/components/menu/#mdmenu-lessmd-menugreater
+     */
+    menuCorner?: string;
     /**
      * @description Keeps the user clicks outside the menu.
      *
